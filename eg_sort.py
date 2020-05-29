@@ -102,6 +102,25 @@ def quick_sort(arr: list, lo=None, hi=None) -> None:
 
 
 
+def binary_search(arr: list, elt) -> int:
+    """
+    :param arr: A sorted array
+    :param elt: The element to search for
+    :return: The index of the target element. -1 if not present
+    If target element is present multiple times, returns one of these indices
+    """
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if arr[mid] == elt:
+            return mid
+        elif arr[mid] > elt:
+            hi = mid - 1
+        else:
+            lo = mid + 1
+
+    return -1
+
 
 
 l = [4, 3, 2, 7, 8, 1, 5, 6]
@@ -111,3 +130,6 @@ l = [4, 3, 2, 7, 8, 1, 5, 6]
 
 quick_sort(l)
 print(l)
+
+for i in range(10):
+    print(binary_search(l, i))
