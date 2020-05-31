@@ -8,7 +8,7 @@ class HashTableOA:
     No delete() support
     """
 
-    def __init__(self, slots, h=None, probe='linear'):
+    def __init__(self, slots: int, h=None, probe='linear'):
         """
         :param slots: number of slots in the hash table
         :param h: the hash function, defaults to the multiplication method
@@ -44,7 +44,7 @@ class HashTableOA:
         return False
 
 
-    def hash_mult(self, k):
+    def hash_mult(self, k: int) -> int:
         # Hashing using the multiplication method
         return math.floor(self.slots * ((k * 0.618) % 1))
 
