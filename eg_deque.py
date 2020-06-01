@@ -76,30 +76,31 @@ class Deque:
 
 "========= Testing Deque ========="
 
-d = Deque()
-print(d.array)
+def test_deque():
+    d = Deque()
+    print(d.array)
 
-d.push(1)
-d.push(2)
+    d.push(1)
+    d.push(2)
 
-print(d.array)
+    print(d.array)
 
-print(d.dequeue())
-print(d.array)
+    print(d.dequeue())
+    print(d.array)
 
-d.enqueue(3)
-d.enqueue(4)
-print(d.array)
-d.enqueue(5)
-print(d.array)
-d.enqueue(6)
-print(d.array)
+    d.enqueue(3)
+    d.enqueue(4)
+    print(d.array)
+    d.enqueue(5)
+    print(d.array)
+    d.enqueue(6)
+    print(d.array)
 
-print(d.pop())
-print(d.dequeue())
-print(d.array)
+    print(d.pop())
+    print(d.dequeue())
+    print(d.array)
 
 
-for i in range(6, 20):
-    d.push(i)
-print(d.array)
+    for i in range(6, 20):
+        d.push(i)
+    print(d.array)
